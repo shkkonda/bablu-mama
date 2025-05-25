@@ -371,32 +371,33 @@ def main():
         st.info("👆 Please upload an Excel file to get started.")
 
         st.header("📋 Instructions")
-        st.markdown("""
-        **How to use this app:**
-
-        1. **Upload** your Excel file using the file uploader above
-        2. **Map** your columns to the required fields:
-           - **CONSIGNEE NAME**: Column containing customer/consignee names
-           - **INV DATE**: Column containing invoice dates
-           - **Qty**: Column containing quantities to sum
-        3. **Generate** the cross-tab summary
-        4. **Download** the formatted Excel file
-
-        **Output Format:**
-        - Rows: Distinct consignee names
-        - Columns: Distinct invoice dates
-        - Values: Sum of quantities for each consignee-date combination
-
-        **Requirements:**
-        - Excel file (.xlsx or .xls)
-        - Columns for consignee names, dates, and quantities
-        - Data should be in tabular format with headers
-
-        **🔧 Date Fixing Feature:**
-        - Automatically fixes truncated dates (e.g., "07.03.202" → "07.03.2025")
-        - Handles various date formats
-        - Uses current year (2025) for incomplete dates
-        """)
+        with st.expander("📖 How to Use This App", expanded=False):
+            st.markdown("""
+            **How to use this app:**
+    
+            1. **Upload** your Excel file using the file uploader above
+            2. **Map** your columns to the required fields:
+               - **CONSIGNEE NAME**: Column containing customer/consignee names
+               - **INV DATE**: Column containing invoice dates
+               - **Qty**: Column containing quantities to sum
+            3. **Generate** the cross-tab summary
+            4. **Download** the formatted Excel file
+    
+            **Output Format:**
+            - Rows: Distinct consignee names
+            - Columns: Distinct invoice dates
+            - Values: Sum of quantities for each consignee-date combination
+    
+            **Requirements:**
+            - Excel file (.xlsx or .xls)
+            - Columns for consignee names, dates, and quantities
+            - Data should be in tabular format with headers
+    
+            **🔧 Date Fixing Feature:**
+            - Automatically fixes truncated dates (e.g., "07.03.202" → "07.03.2025")
+            - Handles various date formats
+            - Uses current year (2025) for incomplete dates
+            """)
 
 
 if __name__ == "__main__":
