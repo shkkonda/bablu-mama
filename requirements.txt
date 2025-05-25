@@ -1,7 +1,6 @@
 streamlit
 pandas
 numpy
-xlsxwriter
 datetime
 re
 io
